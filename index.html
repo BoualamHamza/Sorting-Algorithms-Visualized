@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visualisation des algorithms de tries</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/interaction.js"></script>
+    <script defer src="./js/generator.js"></script>
+    <script defer src="./js/graph.js"></script>
+    <script defer src="./js/algorithms.js"></script>
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="graph-size">Graph Size:</label>
+        <input
+          type="range"
+          id="graph-size"
+          name="graph-size"
+          min="1"
+          max="800"
+          onchange="drawBars(generateArray(this.value), -1)"
+        />
+      </div>
+      <div class="form-group">
+        <label for="graph-speed">Graph Delay:</label>
+        <input
+          type="range"
+          id="graph-speed"
+          name="graph-speed"
+          min="1"
+          max="10"
+        />
+      </div>
+      <div class="form-group">
+        <label for="sort-algorithm">Algorithm:</label>
+        <select id="sort-algorithm" name="sort-algorithm">
+          <option value="bubble">Bubble Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="insertion">insertion Sort</option>
+          <option value="shell">Shell Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="cocktail">Cocktail Shaker Sort</option>
+          <option value="heap">Heap Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="gnome">Gnome Sort</option>
+          <option value="oddeven">OddEven Sort</option>
+        </select>
+      </div>
+      <button type="submit">Display Graph</button>
+    </form>
+    <canvas id="canva"></canvase>
+  </body>
+</html>
